@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Schnarchbox</title>
+		<meta charset="utf-8" /> 
+		<link rel='stylesheet' href='styles/style.css'></link>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#main #destination").hide();
+
+				$("#main").click(function() {					
+					$("#main #overview").fadeOut( "slow", function() {
+						$("#main #destination").fadeIn( "slow", function() {
+
+						});
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<p id="overview">
+				<span class="time">
+					23:25
+				</span><br>
+				<span class="date">
+					Montag, 01. März 2016
+				</span>
+			</p>
+			<p id="destination">
+				<input class="textfield" type="text" name="destination" placeholder="Ziel"><br>
+				<input class="select" type="submit" name="walking" value="Fuß"><br>
+				<input class="select" type="submit" name="car" value="Auto"><br>
+				<input class="select" type="submit" name="train" value="Zug"><br>
+				<input class="select" type="submit" name="fly" value="Flugzeug"><br>
+			</p>
+		</div>
+	</body>
+</html>
